@@ -127,7 +127,8 @@ main {
 
 .nav-bar .icon {
   display: none;
-  width: 25px;
+  width: 24px;
+  margin-top: 4px;
 }
 
 .nav-bar ul {
@@ -155,6 +156,7 @@ main {
 .hero-content {
   position: relative;
   z-index: 1;
+  margin: auto 0;
 }
 
 .hero-content address {
@@ -175,7 +177,7 @@ main {
 .hero h2 + p {
   color: var(--clr-text-secondary);
   font-size: clamp(var(--fs-sm), 2vw, var(--fs-lg));
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-medium);
   max-width: 700px;
   margin: var(--space-sm) auto var(--space-md);
   line-height: 1.5;
@@ -261,21 +263,36 @@ main {
   gap: var(--space-md);
 }
 
+
+
+/* ============ TECHNOLOGY CARDS  ============ */
 .tech-container .card {
   display: flex;
   gap: var(--space-md);
-  background-color: var(--clr-border-bg);
   padding: var(--space-sm);
+
+  background-color: var(--clr-border-bg);
+
+  border: 1px solid var(--clr-border-bg);
   border-radius: var(--radius-md);
+
+  transition: all .2s ease;
 }
+
+.tech-container .card:hover {
+  border: 1px solid var(--clr-border);
+  background-color: rgba(35, 35, 35, 1);
+}
+
 
 .card .icon-container {
   width: 3.5rem;
   height: 3.5rem;
   background-color: var(--clr-surface);
   padding: var(--space-sm);
-  border-radius: var(--radius-md);
 
+  border-radius: var(--radius-md);
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,6 +315,20 @@ main {
   color: var(--clr-text-secondary);
   font-weight: var(--fw-regular);
 }
+
+/* ============ CARD BACKGROUND COLORS  ============ */
+
+.tech-container .card:nth-child(1) .icon-container { background-color: #f05d2b33; } /* HTML - orange */
+.tech-container .card:nth-child(2) .icon-container { background-color: #35aadd33; } /* CSS - blue */
+.tech-container .card:nth-child(3) .icon-container { background-color: #fec52833; color: #000; } /* JS - yellow */
+.tech-container .card:nth-child(4) .icon-container { background: linear-gradient(135deg, #fdd52f33 0%, #2b72bc33 100%); } /* Python - yellow & blue gradient */
+.tech-container .card:nth-child(5) .icon-container { background-color: #607d8b33; } /* Flask - muted blue-gray */
+.tech-container .card:nth-child(6) .icon-container { background-color: #7651b133; } /* Bootstrap - purple */
+.tech-container .card:nth-child(7) .icon-container { background-color: #fc6e3d33; } /* Postman - orange */
+.tech-container .card:nth-child(8) .icon-container { background-color: #183e2f33; } /* Figma - dark green */
+
+
+
 
 /* ============ MEDIA QUERIES  ============ */
 @media (max-width: 1024px) {
@@ -331,7 +362,7 @@ main {
   }
 
   .nav-bar ul {
-    padding: var(--space-md) var(--space-lg);
+    padding: var(--space-sm) var(--space-lg);
     gap: var(--space-lg);
   }
 
