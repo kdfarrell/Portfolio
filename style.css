@@ -18,17 +18,17 @@
   --ff-primary: "Raleway", sans-serif;
 
   /* ============ FONT SIZES ============ */
-  --fs-xs: 0.75rem;     
-  --fs-sm: 0.875rem;    
-  --fs-md: 1rem;        
-  --fs-lg: 1.125rem;    
-  --fs-xl: 1.25rem;     
-  --fs-2xl: 1.5rem;     
-  --fs-3xl: 1.875rem;   
-  --fs-4xl: 2.25rem;    
-  --fs-5xl: 3rem;       
-  --fs-6xl: 3.5rem;     
-  --fs-7xl: 3.75rem;    
+  --fs-xs: 0.75rem;    /* 12px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-md: 1rem;       /* 16px */
+  --fs-lg: 1.125rem;   /* 18px */
+  --fs-xl: 1.25rem;    /* 20px */
+  --fs-2xl: 1.5rem;    /* 24px */
+  --fs-3xl: 1.875rem;  /* 30px */
+  --fs-4xl: 2.25rem;   /* 36px */
+  --fs-5xl: 3rem;      /* 48px */
+  --fs-6xl: 3.5rem;    /* 56px */
+  --fs-7xl: 3.75rem;   /* 60px */  
 
   /* ============ FONT WEIGHTS ============ */
   --fw-light: 300;
@@ -43,7 +43,8 @@
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
-  --space-xl: 4rem;
+  --space-xl: 3rem;  
+  --space-2xl: 4rem; 
 
   /* ============ BORDER RADIUS ============ */
   --radius-sm: 4px;
@@ -156,33 +157,11 @@ main {
 .hero-content {
   position: relative;
   z-index: 1;
-  margin: auto 0;
+  margin-top: var(--space-lg);
 }
 
-.hero-content address {
-  color: var(--clr-text-secondary);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-bold);
-  font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: var(--space-md);
-}
 
-.hero h1, .hero h2 {
-  font-size: clamp(var(--fs-3xl), 8vw, var(--fs-7xl));
-  margin: 0;
-}
-
-.hero h2 + p {
-  color: var(--clr-text-secondary);
-  font-size: clamp(var(--fs-sm), 2vw, var(--fs-lg));
-  font-weight: var(--fw-medium);
-  max-width: 700px;
-  margin: var(--space-sm) auto var(--space-md);
-  line-height: 1.5;
-}
-
+/* ============ AVAILABLE ============ */
 .hero .available {
   display: inline-flex;
   align-items: center;
@@ -194,7 +173,7 @@ main {
   font-weight: var(--fw-medium);
 
   padding: var(--space-sm) var(--space-md);
-  margin: var(--space-md) auto 0;
+  margin: 0 auto var(--space-lg);
   width: fit-content;
 
   border: 1px solid var(--clr-border);
@@ -222,6 +201,122 @@ main {
   box-shadow: 0 0 4px #00ff00;
 }
 
+/* ============ NAME AND ROLE ============ */
+
+.hero-content address {
+  color: var(--clr-text-secondary);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-md);
+}
+
+.hero-content h1, .hero-content h2 {
+  font-size: clamp(var(--fs-3xl), 8vw, var(--fs-7xl));
+  margin: 0;
+}
+
+.hero-content h2 + p {
+  color: var(--clr-text-secondary);
+  font-size: clamp(var(--fs-sm), 2vw, var(--fs-lg));
+  font-weight: var(--fw-medium);
+  max-width: 700px;
+  margin: var(--space-sm) auto var(--space-md);
+  line-height: 1.5;
+}
+
+/* ============ SOCIALS ============ */
+
+.socials {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+
+  color: var(--clr-text-primary);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+
+  padding: var(--space-sm) var(--space-lg);
+
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  background-color: var(--clr-border-bg);
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; 
+  transition: background-color 0.3s ease;
+}
+
+.socials li a:hover {
+  background-color: rgba(35, 35, 35, 1);
+}
+
+/* Glow sweep using a pseudo-element */
+.socials li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;      
+  width: 5%;      
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); 
+  pointer-events: none;
+  filter: blur(15px);  
+  transform: skewX(-25deg);
+  animation: sweepGlow 4s linear infinite;
+}
+
+
+@keyframes sweepGlow {
+  0% { 
+    left: -50%; 
+  }
+
+  100% { 
+    left: 150%; 
+  }
+}
+
+
+.github img {
+  width: 25px;
+}
+
+/* ================ ABOUT ME SECTION  ================ */
+.about {
+  max-width: 1280px;
+}
+
+.about h2 {
+  color: var(--clr-text-primary);
+  font-size: clamp(var(--fs-3xl), 8vw, var(--fs-5xl));
+  font-weight: var(--fw-bold);
+
+  margin-bottom: var(--space-md);
+  padding: var(--space-xl) 0 0;
+}
+
+.about p {
+  font-size: var(--fs-lg);
+  color: var(--clr-text-secondary);
+  font-weight: var(--fw-medium);
+  line-height: 1.5;
+}
+
+
 /* ============ TECHNOLOGY SECTION  ============ */
 .technology {
   max-width: 1280px;
@@ -229,7 +324,6 @@ main {
 
   display: flex;
   flex-direction: column;
-  align-items: left;
 
   color: white;
   text-align: left;
@@ -238,7 +332,7 @@ main {
 
 /* ============ TECHNOLOGY HEADER  ============ */
 .technology header {
-  margin-bottom: 3.5rem;
+  margin-bottom: var(--space-lg);
 }
 
 .technology header h2 {
@@ -263,8 +357,6 @@ main {
   gap: var(--space-md);
 }
 
-
-
 /* ============ TECHNOLOGY CARDS  ============ */
 .tech-container .card {
   display: flex;
@@ -283,7 +375,6 @@ main {
   border: 1px solid var(--clr-border);
   background-color: rgba(35, 35, 35, 1);
 }
-
 
 .card .icon-container {
   width: 3.5rem;
@@ -318,16 +409,20 @@ main {
 
 /* ============ CARD BACKGROUND COLORS  ============ */
 
-.tech-container .card:nth-child(1) .icon-container { background-color: #f05d2b33; } /* HTML - orange */
-.tech-container .card:nth-child(2) .icon-container { background-color: #35aadd33; } /* CSS - blue */
-.tech-container .card:nth-child(3) .icon-container { background-color: #fec52833; color: #000; } /* JS - yellow */
-.tech-container .card:nth-child(4) .icon-container { background: linear-gradient(135deg, #fdd52f33 0%, #2b72bc33 100%); } /* Python - yellow & blue gradient */
-.tech-container .card:nth-child(5) .icon-container { background-color: #607d8b33; } /* Flask - muted blue-gray */
-.tech-container .card:nth-child(6) .icon-container { background-color: #7651b133; } /* Bootstrap - purple */
-.tech-container .card:nth-child(7) .icon-container { background-color: #fc6e3d33; } /* Postman - orange */
-.tech-container .card:nth-child(8) .icon-container { background-color: #183e2f33; } /* Figma - dark green */
+.tech-container .card:nth-child(1) .icon-container { background-color: rgba(240, 93, 43, 0.2); } /* HTML - orange */
+.tech-container .card:nth-child(2) .icon-container { background-color: rgba(53, 170, 221, 0.2); } /* CSS - blue */
+.tech-container .card:nth-child(3) .icon-container { background-color: rgba(118, 81, 177, 0.2); } /* Bootstrap - purple */
+.tech-container .card:nth-child(4) .icon-container { background-color: rgba(254, 197, 40, 0.2); color: #000; } /* JS - yellow */
+.tech-container .card:nth-child(5) .icon-container { background-color: rgba(97, 218, 251, 0.2); } /* React - cyan */
+.tech-container .card:nth-child(6) .icon-container { background: linear-gradient(135deg, rgba(253, 213, 47, 0.2) 0%, rgba(43, 114, 188, 0.2) 100%); } /* Python - yellow & blue gradient */
+.tech-container .card:nth-child(7) .icon-container { background-color: rgba(96, 125, 139, 0.2); } /* Flask - muted blue-gray */
+.tech-container .card:nth-child(8) .icon-container { background-color: rgba(15, 89, 54, 0.2); } /* Django - dimmer green */
+.tech-container .card:nth-child(9) .icon-container { background-color: rgba(252, 110, 61, 0.2); } /* Postman - orange */
+.tech-container .card:nth-child(10) .icon-container { background-color: rgba(24, 62, 47, 0.2); } /* Figma - dark green */
 
 
+
+/* ===================== PROJECTS ===================== */
 
 
 /* ============ MEDIA QUERIES  ============ */
