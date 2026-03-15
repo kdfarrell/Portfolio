@@ -8,92 +8,145 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <!-- ================ Google Fonts ================ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
+
     <main>
 
-        <!-- ============================ HERO SECTION ============================ -->
+        <!-- HERO -->
         <section class="hero">
+
             <div class="grid"></div>
 
             <nav class="nav-bar">
                 <ul>
+
                     <li>
                         <a href="#">
                             <span class="text">Home</span>
                             <img class="icon" src="images/nav/home-icon.svg" alt="Home Icon">
                         </a>
                     </li>
+
                     <li>
-                        <a href="/about">
-                            <span class="text">About</span>
-                            <img class="icon" src="images/nav/about-icon.svg" alt="About Icon">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/projects">
-                            <span class="text">Work</span>
+                        <a href="#project">
+                            <span class="text">Projects</span>
                             <img class="icon" src="images/nav/work-icon.svg" alt="Work Icon">
                         </a>
                     </li>
+
                     <li>
-                        <a href="/contact">
-                            <span class="text">Contact</span>
-                            <img class="icon" src="images/nav/contact-icon.svg" alt="Contact Icon">
+                        <a href="#technology">
+                            <span class="text">Tools</span>
+                            <img class="icon" src="images/nav/technology-icon.svg" alt="About Icon">
                         </a>
                     </li>
+
                 </ul>
             </nav>
 
             <section class="hero-content">
+
                 <p class="available">Available to work</p>
                 <address>Based in Trinidad & Tobago</address>
+
                 <h1>Kareem D. Farrell</h1>
-                <h2>Front-End Developer</h2>
-                <p>I focus on creating web applications that are effective and user-friendly. I like to build interfaces
-                    that feel natural and are easy for anyone to navigate.</p>
+                <h2>Full-Stack Developer</h2>
+
+                <p>
+                    I'm a 22-year-old full stack developer building web applications and clean interfaces with Python.
+                    Outside of coding, I spend my time working out or watching anime.
+                </p>
+
                 <ul class="socials">
+
                     <li class="github">
                         <a href="https://github.com/kdfarrell" target="_blank" rel="noopener">
                             <img class="logo" src="images/github-icon.svg" alt="GitHub Icon">
                             <span class="text">GitHub</span>
                         </a>
                     </li>
+
                 </ul>
+
             </section>
+
         </section>
 
-        <!-- =========================== ABOUT SECTION =========================== -->
-        <section class="about">
-            <h2>About Me</h2>
-            <p>
-                I'm Kareem, a web developer who builds applications that are functional, responsive, and easy to
-                navigate. While creating clean interfaces and practical backend systems, I stay active with workouts,
-                watch anime, and experiment with new ideas hands-on. I use modern tools and technologies to make
-                projects efficient and scalable.
-            </p>
+        <!-- PROJECT SECTION -->
+        <section id="project" class="project">
+
+            <h2>Personal Projects</h2>
+
+            <div class="projects-container">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="images/mockups/Playlist2Mp3.png" alt="Image of Playlist2Mp3 home page">
+                    </div>
+
+                    <div class="project-details">
+
+                        <h3>Playlist2Mp3</h3>
+
+                        <ul class="project-tech">
+
+                            <li class="project-tech-icon html">
+                                <img src="images/technologies/html-icon.svg" alt="HTML logo">
+                            </li>
+
+                            <li class="project-tech-icon css">
+                                <img src="images/technologies/css-icon.svg" alt="CSS logo">
+                            </li>
+
+                            <li class="project-tech-icon javascript">
+                                <img src="images/technologies/js-icon.svg" alt="JavaScript logo">
+                            </li>
+
+                            <li class="project-tech-icon flask">
+                                <img src="images/technologies/flask-icon.svg" alt="Flask logo">
+                            </li>
+
+                        </ul>
+
+                        <p>
+                            Playlist2Mp3 is a web app that converts YouTube videos and playlists into MP3 files,
+                            allowing users to download single videos or entire playlists packaged in a ZIP archive.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- ==================== CURRENT TECHNOLOGIES SECTION ==================== -->
-        <section class="technology">
+        <!-- TECHNOLOGY SECTION -->
+        <section id="technology" class="technology">
+
             <header>
+
                 <h2>Current Technologies</h2>
-                <p>I use modern tools and technologies to design and develop websites and applications that are
-                    functional, responsive, and efficient. These are some of the main technologies I rely on when
-                    building my projects.</p>
+
+                <p>
+                    I use modern tools and technologies to design and develop websites and applications
+                    that are functional, responsive, and efficient. These are some of the main technologies
+                    I rely on when building my projects.
+                </p>
+
             </header>
 
-            <div class="tech-container">
+            <div class="technology-container">
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon html">
                         <img src="images/technologies/html-icon.svg" alt="HTML logo">
                     </div>
                     <div>
@@ -102,8 +155,8 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon css">
                         <img src="images/technologies/css-icon.svg" alt="CSS logo">
                     </div>
                     <div>
@@ -112,8 +165,8 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon bootstrap">
                         <img src="images/technologies/bootstrap-icon.svg" alt="Bootstrap logo">
                     </div>
                     <div>
@@ -122,8 +175,8 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon javascript">
                         <img src="images/technologies/js-icon.svg" alt="JavaScript logo">
                     </div>
                     <div>
@@ -132,8 +185,8 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon react">
                         <img src="images/technologies/react-icon.svg" alt="React logo">
                     </div>
                     <div>
@@ -142,8 +195,8 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon python">
                         <img src="images/technologies/python-icon.svg" alt="Python logo">
                     </div>
                     <div>
@@ -152,8 +205,8 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon flask">
                         <img src="images/technologies/flask-icon.svg" alt="Flask logo">
                     </div>
                     <div>
@@ -162,9 +215,9 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
-                        <img src="images/technologies/djanog-icon.svg" alt="Flask logo">
+                <div class="technology-card">
+                    <div class="technology-icon django">
+                        <img src="images/technologies/django-icon.svg" alt="Django logo">
                     </div>
                     <div>
                         <h4>Django</h4>
@@ -172,9 +225,8 @@
                     </div>
                 </div>
 
-                
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon postman">
                         <img src="images/technologies/postman-icon.svg" alt="Postman logo">
                     </div>
                     <div>
@@ -183,8 +235,8 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="icon-container">
+                <div class="technology-card">
+                    <div class="technology-icon figma">
                         <img src="images/technologies/figma-icon.svg" alt="Figma logo">
                     </div>
                     <div>
@@ -194,10 +246,11 @@
                 </div>
 
             </div>
+
         </section>
 
-        
     </main>
+
 </body>
 
 </html>
