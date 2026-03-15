@@ -311,8 +311,9 @@ main {
   font-size: clamp(var(--fs-3xl), 8vw, var(--fs-5xl));
   font-weight: var(--fw-bold);
 
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
   padding: var(--space-xl) 0 0;
+  text-align: center;
 }
 
 /* ================ PROJECT CONTAINER  ================ */
@@ -333,6 +334,8 @@ main {
 
   overflow: hidden;
   color: var(--clr-text-primary);
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .project-image img {
@@ -404,6 +407,7 @@ main {
   font-size: clamp(var(--fs-3xl), 8vw, var(--fs-5xl));
   font-weight: var(--fw-bold);
   margin-bottom: var(--space-md);
+  text-align: center;
 }
 
 .technology header p {
@@ -487,22 +491,14 @@ main {
 
 /* ============ MEDIA QUERIES  ============ */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 
   .projects-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-}
-
-@media (max-width: 768px) {
-
   .technology-container {
     grid-template-columns: repeat(2, minmax(0, 1fr)); 
-  }
-
-  .projects-container {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
 }
@@ -539,9 +535,15 @@ main {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .projects-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  @media (max-width: 425px) {
+  
+
+}
+
+@media (max-width: 425px) {
 
   .socials a {
     gap: var(--space-xs);
