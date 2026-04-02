@@ -309,7 +309,7 @@ main {
   left: -50%;
   width: 5%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.75);
   pointer-events: none;
   filter: blur(15px);
   transform: skewX(-25deg);
@@ -565,14 +565,17 @@ main {
 
 .html { background-color: rgba(240, 93, 43, 0.2); }
 .css { background-color: rgba(53, 170, 221, 0.2); }
-.bootstrap { background-color: rgba(118, 81, 177, 0.2); }
 .javascript { background-color: rgba(254, 197, 40, 0.2); }
+.bootstrap { background-color: rgba(118, 81, 177, 0.2); }
+.tailwind { background-color: rgba(66, 169, 178, 0.2); }
+.vue { background: linear-gradient(135deg, rgba(65, 183, 131, 0.2) 0%, rgba(52, 130, 180, 0.2) 100%); }
 .react { background-color: rgba(97, 218, 251, 0.2); }
 .python { background: linear-gradient(135deg, rgba(253, 213, 47, 0.2) 0%, rgba(43, 114, 188, 0.2) 100%); }
 .flask { background-color: rgba(96, 125, 139, 0.2); }
 .django { background-color: rgba(15, 89, 54, 0.2); }
 .postman { background-color: rgba(252, 110, 61, 0.2); }
 .figma { background-color: rgba(24, 62, 47, 0.2); }
+
 
 
 
