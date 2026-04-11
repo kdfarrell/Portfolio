@@ -18,7 +18,7 @@
 
   /* ----- FONTS ----- */
 
-  --ff-primary: "Raleway", sans-serif;
+  --ff-primary: "Raleway", sans-serif; 
 
 
   /* ----- FONT SIZES ----- */
@@ -568,6 +568,7 @@ main {
 .edu-card .img-container {
   width: 60px;
   aspect-ratio: 1 / 1;
+  min-width: 60px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -576,7 +577,8 @@ main {
 .edu-card img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 } 
 
 
@@ -590,14 +592,14 @@ main {
 }
 
 .edu-card h4 {
-  font-size: clamp(var(--fs-sm), 2vw, var(--fs-lg));
+  font-size: clamp(var(--fs-sm), 3vw, var(--fs-lg));
   position: relative;
-  width: fit-content;
+  width: 100%;
   transition: text-shadow 0.3s ease;
 }
 
 .edu-card .info:hover h4 {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
 
 .edu-card p {
