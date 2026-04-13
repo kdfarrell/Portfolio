@@ -270,6 +270,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: var(--space-md);
+    flex-wrap: wrap;
 }
 
 .socials a {
@@ -310,7 +311,7 @@ main {
   pointer-events: none;
   filter: blur(15px);
   transform: skewX(-25deg);
-  animation: sweepGlow 3s linear infinite;
+  animation: sweepGlow 4s linear infinite;
 }
 
 .socials li:nth-child(1) a::before {
@@ -321,9 +322,13 @@ main {
   animation-delay: 1.5s;
 }
 
+.socials li:nth-child(3) a::before {
+  animation-delay: 3s;
+}
+
 @keyframes sweepGlow {
-  0%   { left: -50%; }
-  100% { left: 150%; }
+  0%   { left: -60%; }
+  100% { left: 160%; }
 }
 
 
@@ -678,12 +683,20 @@ main {
 }
 
 
+@media (max-width: 438px) {
+
+  .socials li:nth-child(3) a::before {
+    animation-delay: 1s;
+  }
+}
+
+
+
 /* ----- RESPONSIVE — SMALL MOBILE (≤ 425px) ----- */
 
 @media (max-width: 425px) {
 
   .socials a {
-    gap: var(--space-xs);
     font-size: var(--fs-sm);
     padding: var(--space-sm) var(--space-md);
   }
