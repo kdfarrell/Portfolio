@@ -77,19 +77,19 @@
             <!-- HERO CONTENT -->
             <section class="hero-content">
 
-                <p class="available">Available to work</p>
-                <address>Based in Trinidad & Tobago</address>
+                <p class="available hero-stagger">Available to work</p>
+                <address class="hero-stagger" >Based in Trinidad & Tobago</address>
 
-                <h1>Kareem D. Farrell</h1>
-                <h2>Full-Stack Developer</h2>
+                <h1 class="hero-stagger" >Kareem D. Farrell</h1>
+                <h2 class="hero-stagger" >Full-Stack Developer</h2>
 
-                <p>
+                <p class="hero-stagger" >
                     I'm a 22-year-old full stack developer who builds web applications and clean interfaces using
                     Python.
                     Outside of coding, I spend my time working out or watching anime.
                 </p>
 
-                <ul class="socials">
+                <ul class="socials hero-stagger">
 
                     <li>
                         <a href="https://github.com/kdfarrell" target="_blank" rel="noopener">
@@ -390,6 +390,22 @@
 
         </section>
     </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.project-card, .technology-card, .edu-card').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 
