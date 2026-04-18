@@ -96,6 +96,14 @@ main {
   padding: 0 2rem;
 }
 
+.btn {
+  transition: transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
 
 /* ----- HERO SECTION ----- */
 
